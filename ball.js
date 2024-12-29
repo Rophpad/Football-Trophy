@@ -5,7 +5,7 @@ export default class Ball {
     this.verticalPosition = 0;
     this.speed = 1;
     this.isMoving = false;
-    this.horizontalSpeed = 50;
+    this.horizontalSpeed = this.getRandomDirection();
     this.isRedirected = false;
     this.gameOverCallback = null;
   }
@@ -37,10 +37,10 @@ export default class Ball {
     return positions[Math.floor(Math.random() * positions.length)];
   }
 
-  // getRandomDirection() {
-  //   const directions = [50, -50, 50];
-  //   return directions[Math.floor(Math.random() * directions.length)];
-  // }
+  getRandomDirection() {
+    const directions = [50, -50, 50];
+    return directions[Math.floor(Math.random() * directions.length)];
+  }
 
   enterIn(container) {
     if (!this.element) {

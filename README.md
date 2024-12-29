@@ -69,4 +69,6 @@ Contient des fonctions **utilitaires** pour le jeu. Ce fichier permet de :
 
 - Gérer correctement la redirection random de la ball au contact avec le Player
 - Faire fonctionner le boutton: "Activer/Désactiver le son"
+- Rendre le code compatible à tous les navigateurs
+- Rendre le code propre
 

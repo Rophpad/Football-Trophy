@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     let point = 0;
+    let sound = new Audio();
+    sound.src = "ballSound.wav"
 
     function checkCollision() {
       if (!player.element || !ball.element) return;
@@ -31,12 +33,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const distance = Math.abs(playerCenter - ballCenter);
 
-      const collisionRange = 30;
+      const collisionRange = 10;
 
       const isInVerticalRange =
-        ball.verticalPosition >= 65 && ball.verticalPosition <= 75;
+        ball.verticalPosition >= 70 && ball.verticalPosition <= 75;
 
       if (distance < collisionRange && isInVerticalRange) {
+        sound.play();
         point++;
         score.innerHTML = point;
 
